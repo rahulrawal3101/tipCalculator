@@ -14,8 +14,9 @@ const HomePage = () => {
     // console.log(customAmt)
 
     const addTipAmount=(tipAmt)=>{
-        console.log(tipAmt);
-        const billAmt = parseFloat(billAmount);
+        // console.log(tipAmt);
+        if(person >= 0){
+            const billAmt = parseFloat(billAmount);
         let tip;
         if(tipAmt == 'custom'){
             tip = parseFloat(customAmt);
@@ -24,9 +25,14 @@ const HomePage = () => {
         }
         const total = billAmt + tip;
         const tipPerPerson = tip / person;
-        const amountperPerson = total/ person;
+        const amountperPerson = total / person;
         setTipAmtPerPerson(tipPerPerson.toFixed(2));
         setTotalAmountPerPerson(amountperPerson.toFixed(2));
+        }
+        if(person == 0){
+            alert('Please Choose the Person')
+        }
+        
     };
 
     const clearData=()=>{
@@ -34,12 +40,12 @@ const HomePage = () => {
         setPerson('');
         setTipAmtPerPerson('0.00');
         setTotalAmountPerPerson('0.00');
-        setCustomAmt('')
+        setCustomAmt('');
     };
 
     const handleCustomTipAmt=(e)=>{
         setCustomAmt(e.target.value);
-        addTipAmount(parseFloat(e.target.value))
+        addTipAmount(parseFloat(e.target.value));
     }
     return (
         <Grid container sx={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
