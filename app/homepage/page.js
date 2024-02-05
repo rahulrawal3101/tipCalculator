@@ -119,7 +119,7 @@ const HomePage = () => {
                                             <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                                 <Box>
                                                     <Typography sx={{ color: 'white', fontSize: '11px', fontFamily: 'monospace' }}>Tip Amount</Typography>
-                                                    <Typography sx={{ color: '#649BA0', fontSize: '11px', fontFamily: 'monospace', ml: '7px' }}>/Person</Typography>
+                                                    <Typography sx={{ color: '#649BA0', fontSize: '11px', fontFamily: 'monospace', ml: '3px' }}>/Person</Typography>
                                                 </Box>
                                                 <Box>
                                                     <Typography sx={{ color: '#21C3AC', fontFamily: 'monospace', fontSize: '21px', fontWeight: 'bold' }}>${data.totalTipPerPerson }</Typography>
@@ -128,7 +128,7 @@ const HomePage = () => {
                                             <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', pt: '50px' }}>
                                                 <Box>
                                                     <Typography sx={{ color: 'white', fontSize: '11px', fontFamily: 'monospace' }}>Total</Typography>
-                                                    <Typography sx={{ color: '#649BA0', fontSize: '11px', fontFamily: 'monospace', ml: '7px' }}>/Person</Typography>
+                                                    <Typography sx={{ color: '#649BA0', fontSize: '11px', fontFamily: 'monospace', ml: '3px' }}>/Person</Typography>
                                                 </Box>
                                                 <Box>
                                                     <Typography sx={{ color: '#21C3AC', fontFamily: 'monospace', fontSize: '21px', fontWeight: 'bold' }}>${ data.totalAmountPerPerson}</Typography>
