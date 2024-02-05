@@ -5,10 +5,14 @@ import PersonIcon from '@mui/icons-material/Person';
 
 const HomePage = () => {
     const [data,setData]=useState({billAmount:"",tipAmount:"",numOfPerson:"",totalTipPerPerson:"0.00",totalAmountPerPerson:"0.00"});
+    const [col, setCol] = useState('')
     
 
 
     const addTipAmount=(num)=>{
+        if(num){
+            setCol(num)
+        }
         setData({...data,tipAmount:Number(num)});
     }
 
@@ -74,19 +78,19 @@ const HomePage = () => {
 
                                 <Grid container sx={{ mt: '22px', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <Grid item xs={3.1} >
-                                        <Button sx={{ bgcolor: '#00474B', color: 'white', p: '2px 8px', width: '100%', fontWeight: 'bold', '&:hover': { bgcolor: '#9FE8DD', color: '#00474B' } }} onClick={()=>{addTipAmount(5)}}>5%</Button>
+                                        <Button sx={{ bgcolor:col == 5 ?'#9FE8DD': '#00474B', color:col == 5? '#00474B': 'white', p: '2px 8px', width: '100%', fontWeight: 'bold', '&:hover': { bgcolor: '#9FE8DD', color: '#00474B' } }} onClick={()=>{addTipAmount(5)}}>5%</Button>
                                     </Grid>
                                     <Grid item xs={3.1}>
-                                        <Button sx={{ bgcolor: '#00474B', color: 'white', p: '2px 8px', width: '100%', fontWeight: 'bold', '&:hover': { bgcolor: '#9FE8DD', color: '#00474B' } }} onClick={()=>{addTipAmount(10)}}>10%</Button>
+                                        <Button sx={{ bgcolor:col == 10 ?'#9FE8DD': '#00474B', color:col == 10? '#00474B': 'white', p: '2px 8px', width: '100%', fontWeight: 'bold', '&:hover': { bgcolor: '#9FE8DD', color: '#00474B' } }} onClick={()=>{addTipAmount(10)}}>10%</Button>
                                     </Grid>
                                     <Grid item xs={3.1}>
-                                        <Button sx={{ bgcolor: '#00474B', color: 'white', p: '2px 8px', width: '100%', fontWeight: 'bold', '&:hover': { bgcolor: '#9FE8DD', color: '#00474B' } }} onClick={()=>{addTipAmount(15)}}>15%</Button>
+                                        <Button sx={{ bgcolor:col == 15 ?'#9FE8DD': '#00474B', color:col == 15? '#00474B': 'white', p: '2px 8px', width: '100%', fontWeight: 'bold', '&:hover': { bgcolor: '#9FE8DD', color: '#00474B' } }} onClick={()=>{addTipAmount(15)}}>15%</Button>
                                     </Grid>
                                     <Grid item xs={3.1} sx={{ mt: '11px' }}>
-                                        <Button sx={{ bgcolor: '#00474B', color: 'white', p: '2px 8px', width: '100%', fontWeight: 'bold', '&:hover': { bgcolor: '#9FE8DD', color: '#00474B' } }} onClick={()=>{addTipAmount(25)}}>25%</Button>
+                                        <Button sx={{ bgcolor:col == 25 ?'#9FE8DD': '#00474B', color:col == 25? '#00474B': 'white', p: '2px 8px', width: '100%', fontWeight: 'bold', '&:hover': { bgcolor: '#9FE8DD', color: '#00474B' } }} onClick={()=>{addTipAmount(25)}}>25%</Button>
                                     </Grid>
                                     <Grid item xs={3.1} sx={{ mt: '11px' }}>
-                                        <Button sx={{ bgcolor: '#00474B', color: 'white', p: '2px 8px', width: '100%', fontWeight: 'bold', '&:hover': { bgcolor: '#9FE8DD', color: '#00474B' } }} onClick={()=>{addTipAmount(50)}}>50%</Button>
+                                        <Button sx={{ bgcolor:col == 50 ?'#9FE8DD': '#00474B', color:col == 50? '#00474B': 'white', p: '2px 8px', width: '100%', fontWeight: 'bold', '&:hover': { bgcolor: '#9FE8DD', color: '#00474B' } }} onClick={()=>{addTipAmount(50)}}>50%</Button>
                                     </Grid>
                                     <Grid item xs={3.1} sx={{ mt: '11px' }}>
 
